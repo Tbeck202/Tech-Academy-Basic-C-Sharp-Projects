@@ -44,9 +44,6 @@ namespace varDataTypeDrill
             Console.WriteLine("Thank you for your answers. An instructor will respond to this shortly. Have agreat day!");
             Console.ReadLine();
 
-           
-
-
         }
     }
 }
