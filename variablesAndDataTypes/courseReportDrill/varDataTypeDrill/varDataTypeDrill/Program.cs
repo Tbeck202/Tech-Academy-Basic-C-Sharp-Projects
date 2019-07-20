@@ -41,7 +41,7 @@ namespace varDataTypeDrill
             Console.WriteLine("Feedback: " + feedback);
             Console.WriteLine("Hours Studied: " + hoursStudied);
 
-            Console.WriteLine("Thank you for your answers. An instructor will respond to this shortly. Have agreat day!");
+            Console.WriteLine("Thank you for your answers. An instructor will respond to this shortly. Have a great day!");
             Console.ReadLine();
 
         }
