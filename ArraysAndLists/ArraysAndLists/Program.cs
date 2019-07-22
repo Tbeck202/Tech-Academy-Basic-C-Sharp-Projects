@@ -6,10 +6,12 @@ class Program
 {
     static void Main(string[] args)
     {
+        // EXERCISE 1--------------------------------------------------------------------------------
         string[] nameArray = { "Donovan Mitchell", "Rudy Gobert", "Joe Ingles" };
         Console.WriteLine("Type 0, 1, or 2 to pick a new favorite basketball player.");
         int selection = Convert.ToInt32(Console.ReadLine());
 
+        // EXERCISE 3--------------------------------------------------------------------------------
         bool isSelected = selection < nameArray.Length;
 
         do
@@ -34,6 +36,7 @@ class Program
         while (!isSelected);
         Console.ReadLine();
 
+        // EXERCISE 2--------------------------------------------------------------------------------
         int[] intArray = { 45, 27, 2 };
         Console.WriteLine("Type the same number from before to see \nyour new favorite basketball players jersey number.");
         int numSelection = Convert.ToInt32(Console.ReadLine());
@@ -43,6 +46,7 @@ class Program
         Console.WriteLine("Press enter to continue");
         Console.ReadLine();
 
+        // EXERCISE 4--------------------------------------------------------------------------------
         List<string> stringList = new List<string>();
         stringList.Add("red");
         stringList.Add("blue");
