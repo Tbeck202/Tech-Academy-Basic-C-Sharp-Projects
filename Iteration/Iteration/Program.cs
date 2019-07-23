@@ -8,25 +8,25 @@ class Program
     static void Main(string[] args)
     {
         //EXERCISE 1-------------------------------------------------------------------------------------------
-        //    string[] greetings = { "hi ", "hello ", "what's up ", "what's good ", "hola ", "hey " };
-        //    Console.WriteLine("Please type your first name");
-        //    string name = Console.ReadLine();
+        //string[] greetings = { "hi ", "hello ", "what's up ", "what's good ", "hola ", "hey " };
+        //Console.WriteLine("Please type your first name");
+        //string name = Console.ReadLine();
 
-        //    for (int i = 0; i < greetings.Length; i++)
-        //    {
-        //        Console.WriteLine(greetings[i] + name);
-        //    }
-        //    Console.ReadLine();
+        //for (int i = 0; i < greetings.Length; i++)
+        //{
+        //    Console.WriteLine(greetings[i] + name);
+        //}
+        //Console.ReadLine();
 
         // INFINITE LOOP -------------------------------------------------------------------
 
         //List<int> numbers = new List<int>() { 1, 2, 3, 4, 5 };
 
-        //while(true)
-        //{ 
+        //while (true)
+        //{
         //    foreach (int number in numbers)
         //    {
-        //        if (number > 0 )
+        //        if (number > 0)
         //        {
         //            Console.WriteLine(number + "00");
         //        }
@@ -76,24 +76,25 @@ class Program
 
         // DISPLAY INDEX FROM SELECTED ITEM IN LIST -----------------------------------------------------------------------------------
 
-        //List<string> players = new List<string>() { "Donovan Mitchell", "Rudy Gobert", "Mike Conley", "Joe Ingles", "Bojan Bogdanovich", "Royce O'Neale" };
-        //Console.WriteLine("Please enter your favorite Jazz player's full name");
-        //string favPlayer = (Console.ReadLine());
+        //List<string> players = new List<string>() { "donovan mitchell", "rudy gobert", "mike conley", "joe ingles", "bojan bogdanovich", "royce o'neale" };
+        //Console.WriteLine("please enter your favorite jazz player's full name");
+        //string favplayer = (Console.ReadLine());
 
         //foreach (string player in players)
         //{
-        //    if (favPlayer == player)
+        //    if (favplayer == player)
         //    {
-        //        int index = players.FindIndex(a => a.Contains(favPlayer));
-        //        Console.WriteLine("Your favorite player's full name is at index " + index);
+        //        int index = players.FindIndex(a => a.Contains(favplayer));
+        //        Console.WriteLine("your favorite player's full name is at index " + index);
         //    }
         //}
         //Console.ReadLine();
 
-        // DISPLAY INDEX FROM SELECTED ITEM IN LIST WITH RULE ADDED-----------------------------------------------------------------------------------
+        // DISPLAY INDEX FROM SELECTED ITEM IN LIST WITH RULES-----------------------------------------------------------------------------------
 
-        //List<string> players = new List<string>() { "Donovan Mitchell", "Rudy Gobert", "Mike Conley", "Joe Ingles", "Bojan Bogdanovich", "Royce O'Neale" };
+
         //Console.WriteLine("Please enter your favorite Jazz player's full name");
+        //List<string> players = new List<string>() { "Donovan Mitchell", "Rudy Gobert", "Mike Conley", "Joe Ingles", "Bojan Bogdanovich", "Royce O'Neale" };
         //string favPlayer = (Console.ReadLine());
 
         //foreach (string player in players)
@@ -102,8 +103,9 @@ class Program
         //    {
         //        int index = players.FindIndex(a => a.Contains(favPlayer));
         //        Console.WriteLine("Your favorite player is at index " + index);
+        //        break;
         //    }
-        //    else 
+        //    else
         //    {
         //        Console.WriteLine("Player does not exist");
         //        break;
@@ -111,29 +113,34 @@ class Program
         //}
         //Console.ReadLine();
 
-        // DISPLAY INDEX FROM SELECTED ITEM IN LIST WITH RULE ADDED AND ENDING -----------------------------------------
+        List<string> colors = new List<string>() { "green", "red", "blue", "yellow", "orange", "blue", "purple" };
+        Console.WriteLine("Pick a color: red, green, blue, yellow, orange, purple. \nType your selection below.");
+        string colorPick = (Console.ReadLine());
+        List<string> selections = colors.FindAll(i => i.Equals(colorPick));
 
-        List<string> players = new List<string>() { "Donovan Mitchell", "Rudy Gobert", "Mike Conley", "Joe Ingles", "Bojan Bogdanovich", "Royce O'Neale" };
-        //bool doesNotExist = true;
-        Console.WriteLine("Please enter your favorite Jazz player's full name");
-        string favPlayer = (Console.ReadLine());
-
-        foreach (string player in players)
+        foreach (string color in colors)
         {
-            if (favPlayer == player)
+            if (selections.Count > 1)
             {
-                int index = players.FindIndex(a => a.Contains(favPlayer));
-                Console.WriteLine("Your favorite player is at index " + index);
-                //doesNotExist = false;
+                int index = colors.FindIndex(a => a.Contains(colorPick));
+                int lastIndex = colors.FindLastIndex(a => a.Contains(colorPick));
+                Console.WriteLine("Your color is at index " + index + " and index " + lastIndex);
+                break;
             }
-            else if (favPlayer != player)
+            else if (selections.Count == 1)
             {
-                Console.WriteLine("That  player does not exist. Try again.");
-                Console.ReadLine();
+                int index = colors.FindIndex(a => a.Contains(colorPick));
+                Console.WriteLine("Your color is at index " + index);
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Your color does not exist");
+                break;
             }
         }
         Console.ReadLine();
-
+        
 
         //EXAMPLE 1-------------------------------------------------------------------------------------
 
@@ -219,7 +226,7 @@ class Program
 
         //foreach (int score in testScores)
         //{
-        //    if (score > 85 )
+        //    if (score > 85)
         //    {
         //        passingScores.Add(score);
         //    }
