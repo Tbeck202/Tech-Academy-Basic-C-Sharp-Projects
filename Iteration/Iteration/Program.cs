@@ -113,6 +113,8 @@ class Program
         //}
         //Console.ReadLine();
 
+        // DRILL 9 AND 10  ------------------------------------------------------------------------------------------------
+
         List<string> colors = new List<string>() { "green", "red", "blue", "yellow", "orange", "blue", "purple" };
         Console.WriteLine("Pick a color: red, green, blue, yellow, orange, purple. \nType your selection below.");
         string colorPick = (Console.ReadLine());
