@@ -178,18 +178,7 @@ class Program
 
         //Console.ReadLine();
 
-        //selections.Add(color);
-        //if (selections.Contains(color))
-        //{
-        //    int index = colors.FindIndex(i => i.Contains(color));
-        //    Console.WriteLine("This color exists twice in this list. First appearing at index " + index);
-        //    continue;
-        //}
-        //else
-        //{
-        //    Console.WriteLine(color);
-        //    continue;
-        //}
+        
 
 
         //EXAMPLE 1-------------------------------------------------------------------------------------
