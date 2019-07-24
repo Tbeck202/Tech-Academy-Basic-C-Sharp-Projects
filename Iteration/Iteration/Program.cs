@@ -96,16 +96,17 @@ class Program
         //Console.WriteLine("Please enter your favorite Jazz player's full name");
         //List<string> players = new List<string>() { "Donovan Mitchell", "Rudy Gobert", "Mike Conley", "Joe Ingles", "Bojan Bogdanovich", "Royce O'Neale" };
         //string favPlayer = (Console.ReadLine());
+        //List<string> selection = players.FindAll(i => i.Equals(favPlayer));
 
         //foreach (string player in players)
         //{
-        //    if (favPlayer == player)
+        //    if (selection.Count > 0)
         //    {
         //        int index = players.FindIndex(a => a.Contains(favPlayer));
         //        Console.WriteLine("Your favorite player is at index " + index);
         //        break;
         //    }
-        //    else
+        //    else 
         //    {
         //        Console.WriteLine("Player does not exist");
         //        break;
@@ -115,34 +116,75 @@ class Program
 
         // DRILL 9 AND 10  ------------------------------------------------------------------------------------------------
 
+        //List<string> colors = new List<string>() { "green", "red", "blue", "yellow", "orange", "blue", "purple" };
+        //Console.WriteLine("Pick a color: red, green, blue, yellow, orange, purple. \nType your selection below.");
+        //string colorPick = (Console.ReadLine());
+        //List<string> selections = colors.FindAll(i => i.Equals(colorPick));
+
+        //foreach (string color in colors)
+        //{
+        //    if (selections.Count > 1)
+        //    {
+        //        int index = colors.FindIndex(a => a.Contains(colorPick));
+        //        int lastIndex = colors.FindLastIndex(a => a.Contains(colorPick));
+        //        Console.WriteLine("Your color is at index " + index + " and index " + lastIndex);
+        //        break;
+        //    }
+        //    else if (selections.Count == 1)
+        //    {
+        //        int index = colors.FindIndex(a => a.Contains(colorPick));
+        //        Console.WriteLine("Your color is at index " + index);
+        //        break;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Your color does not exist");
+        //        break;
+        //    }
+        //}
+        //Console.ReadLine();
+
+        // EXERCISE 11-------------------------------------------------------------------------------------------------------------
+
         List<string> colors = new List<string>() { "green", "red", "blue", "yellow", "orange", "blue", "purple" };
-        Console.WriteLine("Pick a color: red, green, blue, yellow, orange, purple. \nType your selection below.");
-        string colorPick = (Console.ReadLine());
-        List<string> selections = colors.FindAll(i => i.Equals(colorPick));
 
         foreach (string color in colors)
         {
-            if (selections.Count > 1)
+            if (colors.Contains(color))
             {
-                int index = colors.FindIndex(a => a.Contains(colorPick));
-                int lastIndex = colors.FindLastIndex(a => a.Contains(colorPick));
-                Console.WriteLine("Your color is at index " + index + " and index " + lastIndex);
-                break;
-            }
-            else if (selections.Count == 1)
-            {
-                int index = colors.FindIndex(a => a.Contains(colorPick));
-                Console.WriteLine("Your color is at index " + index);
-                break;
-            }
-            else
-            {
-                Console.WriteLine("Your color does not exist");
-                break;
+                List<string> colorFind = colors.FindAll(a => a.Equals(color));
+
+                foreach (string find in colorFind)
+                {
+                    if (colorFind.Count > 1)
+                    {
+                        int index = colors.FindIndex(i => i.Contains(color));
+                        Console.WriteLine("The color " + color + " exists twice in this list. (First appearing at index " + index + ")");
+                        break;
+                    }
+                    else if (colorFind.Count < 2)
+                    {
+                        Console.WriteLine(color);
+                    }
+                }
             }
         }
-        Console.ReadLine();
         
+        Console.ReadLine();
+
+        //selections.Add(color);
+        //if (selections.Contains(color))
+        //{
+        //    int index = colors.FindIndex(i => i.Contains(color));
+        //    Console.WriteLine("This color exists twice in this list. First appearing at index " + index);
+        //    continue;
+        //}
+        //else
+        //{
+        //    Console.WriteLine(color);
+        //    continue;
+        //}
+
 
         //EXAMPLE 1-------------------------------------------------------------------------------------
 
