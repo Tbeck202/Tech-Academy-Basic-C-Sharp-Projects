@@ -26,25 +26,31 @@ class Program
         //{
         //    foreach (int number in numbers)
         //    {
-        //        if (number > 0)
+        //        if (number <= numbers.Count)
         //        {
         //            Console.WriteLine(number + "00");
+
         //        }
         //    }
         //}
+        //Console.ReadLine();
+
 
         //INFINTE LOOP FIXED---------------------------------------------------------------------------
 
         //List<int> numbers = new List<int>() { 1, 2, 3, 4, 5 };
 
-        //foreach (int number in numbers)
-        //{
-        //    if (number > 0)
+        //    foreach (int number in numbers)
         //    {
-        //        Console.WriteLine(number + "00");
+        //        if (number <= numbers.Count)
+        //        {
+        //            Console.WriteLine(number + "00");
+        //            continue;
+        //        }
         //    }
-        //}
         //Console.ReadLine();
+        
+        
 
         // LOOP WITH A < OPERATOR -----------------------------------------------------------------------------------
 
@@ -146,31 +152,31 @@ class Program
 
         // EXERCISE 11-------------------------------------------------------------------------------------------------------------
 
-        List<string> colors = new List<string>() { "green", "red", "blue", "yellow", "orange", "blue", "purple" };
+        //List<string> colors = new List<string>() { "green", "red", "blue", "yellow", "orange", "blue", "purple" };
 
-        foreach (string color in colors)
-        {
-            if (colors.Contains(color))
-            {
-                List<string> colorFind = colors.FindAll(a => a.Equals(color));
+        //foreach (string color in colors)
+        //{
+        //    if (colors.Contains(color))
+        //    {
+        //        List<string> colorFind = colors.FindAll(a => a.Equals(color));
 
-                foreach (string find in colorFind)
-                {
-                    if (colorFind.Count > 1)
-                    {
-                        int index = colors.FindIndex(i => i.Contains(color));
-                        Console.WriteLine("The color " + color + " exists twice in this list. (First appearing at index " + index + ")");
-                        break;
-                    }
-                    else if (colorFind.Count < 2)
-                    {
-                        Console.WriteLine(color);
-                    }
-                }
-            }
-        }
-        
-        Console.ReadLine();
+        //        foreach (string find in colorFind)
+        //        {
+        //            if (colorFind.Count > 1)
+        //            {
+        //                int index = colors.FindIndex(i => i.Contains(color));
+        //                Console.WriteLine("The color " + color + " exists twice in this list. (First appearing at index " + index + ")");
+        //                break;
+        //            }
+        //            else if (colorFind.Count < 2)
+        //            {
+        //                Console.WriteLine(color);
+        //            }
+        //        }
+        //    }
+        //}
+
+        //Console.ReadLine();
 
         //selections.Add(color);
         //if (selections.Contains(color))
