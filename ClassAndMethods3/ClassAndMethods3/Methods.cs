@@ -14,19 +14,18 @@ namespace ClassAndMethods3
             return result;
         }
 
-        public static decimal DoStuff(decimal num2)
+        public static int DoStuff(decimal num2)
         {
             decimal result = num2 / 2;
             int x = Convert.ToInt32(result);
             return x;
         }
 
-        public static string DoStuff(string num3)
+        public static int DoStuff(string num3)
         {
             int numConvert = Convert.ToInt32(num3);
             int result = (numConvert * 7) - 2;
-            string numToString = Convert.ToString(result);
-            return numToString;
+            return result;
         }
 
     }
