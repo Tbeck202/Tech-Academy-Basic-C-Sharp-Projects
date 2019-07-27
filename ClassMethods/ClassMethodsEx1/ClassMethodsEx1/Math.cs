@@ -8,11 +8,11 @@ namespace ClassMethodsEx1
 {
     public class Math
     {
-        public static decimal DoMath (int num1)
+        public static void DoMath (int num1)
         {
             decimal num1Convert = Convert.ToDecimal(num1);
             decimal result = num1Convert / 2;
-            return result;
+            Console.WriteLine("Your number divided by two = " + result);
         }
 
         public static decimal DoMath (int num1, int num3)
@@ -23,7 +23,7 @@ namespace ClassMethodsEx1
             return result;
         }
 
-        public static int GetTwentyFive (out int x)
+        public static int GetTwentyFive(out int x)
         {
             int y = 5 * 5;
             x = y;
