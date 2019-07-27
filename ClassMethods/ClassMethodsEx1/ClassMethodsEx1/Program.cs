@@ -27,6 +27,7 @@ namespace ClassMethodsEx1
 
             decimal numsCombined = MoreMath.DoMoreMath(afterMath, num2);
             Console.WriteLine("Your modified number is now: " + numsCombined);
+            Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
 
             Console.WriteLine("Please enter another number");

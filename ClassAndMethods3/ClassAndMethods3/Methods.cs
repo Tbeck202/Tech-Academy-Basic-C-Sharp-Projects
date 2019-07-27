@@ -8,16 +8,17 @@ namespace ClassAndMethods3
 {
     class Methods
     {
-        public static void DoStuff(int num1)
+        public static int DoStuff(int num1)
         {
             int result = num1 + 5;
-            Console.WriteLine("12 + 5 = " + result);
+            return result;
         }
 
         public static decimal DoStuff(decimal num2)
         {
             decimal result = num2 / 2;
-            return result;
+            int x = Convert.ToInt32(result);
+            return x;
         }
 
         public static string DoStuff(string num3)
