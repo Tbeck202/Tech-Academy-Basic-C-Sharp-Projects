@@ -17,6 +17,7 @@ namespace ClassAndMethods2
             Console.WriteLine("Please enter a second number.");
             int num2 = Convert.ToInt32(Console.ReadLine());
 
+            Methods.doStuff(14, 55);
             Methods.doStuff(num1, num2);
             Console.ReadLine();
         }
