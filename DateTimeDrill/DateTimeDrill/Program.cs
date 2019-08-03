@@ -15,11 +15,13 @@ namespace DateTimeDrill
             Console.WriteLine("The current Date and time = {0}", now);
 
             Console.WriteLine("Enter a number.");
-            DateTime num = Convert.ToDateTime(Console.ReadLine());
+            int num = Convert.ToInt32(Console.ReadLine());
 
-            TimeSpan hourModify = now + hourModify;
+            TimeSpan ts = TimeSpan.FromHours(num);
 
-            Console.WriteLine("{0}", hourModify);
+            DateTime hourModify = now + ts;
+
+            Console.WriteLine("In {0} hours the time will be: {1}",num , hourModify);
             Console.ReadLine();
         }
     }
